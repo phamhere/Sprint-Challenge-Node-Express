@@ -1,0 +1,28 @@
+{
+  "name": "Sprint-Challenge-Node-Express",
+  "version": "1.0.0",
+  "description": "## Assignments",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phamhere/Sprint-Challenge-Node-Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phamhere/Sprint-Challenge-Node-Express/issues"
+  },
+  "homepage": "https://github.com/phamhere/Sprint-Challenge-Node-Express#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
