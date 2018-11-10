@@ -1,18 +1,10 @@
 const express = require("express");
 const projectDb = require("../data/helpers/projectModel");
+const projectControllers = require("../controllers/projectControllers");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  projectDb
-    .get()
-    .then(projects => res.status(200).json(projects))
-    .catch(err =>
-      res
-        .status(500)
-        .json({ error: "The projects information could not be retrieved." })
-    );
-});
+router.get("/", projectControllers.getAllProjects);
 
 router.get("/:id", (req, res) => {
   projectDb
@@ -72,11 +64,9 @@ router.put("/:id", (req, res) => {
       .then(project =>
         project
           ? res.status(200).json(project)
-          : res
-              .status(404)
-              .json({
-                message: "The project with the specified ID does not exist."
-              })
+          : res.status(404).json({
+              message: "The project with the specified ID does not exist."
+            })
       )
       .catch(err =>
         res

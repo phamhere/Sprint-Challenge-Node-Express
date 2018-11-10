@@ -2,7 +2,7 @@
 
 ## What is Node.js?
 
-    Node is a way to use Javascript away from the browser.
+    Node is a way to use JavaScript away from the browser. It's a runtime environment that decides what order to execute JavaScript.
 
 ## What is Express?
 
